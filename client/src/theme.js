@@ -45,6 +45,9 @@ export const theme = createTheme({
     secondary: {
       main: shades.secondary[500],
     },
+    tertiary: {
+      main: '#FDCC49',
+    },
     neutral: {
       dark: shades.neutral[700],
       main: shades.neutral[500],
