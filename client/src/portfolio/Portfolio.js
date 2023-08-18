@@ -1,13 +1,19 @@
 import { useState, useEffect } from 'react';
 import useMediaQuery from './hooks/useMediaQuery';
 import Navbar from './scenes/Navbar';
+import Members from './scenes/Members';
+import Projects from './scenes/Projects';
+// import Contact from './scenes/Contact';
+// import Footer from './scenes/Footer';
 import DotGroup from './scenes/DotGroup';
 import Landing from './scenes/Landing';
+import LineGradient from './components/LineGradient';
+import { motion } from 'framer-motion';
 
-const Portfolio = () => {
+function Portfolio() {
   const [selectedPage, setSelectedPage] = useState('home');
   const [isTopOfPage, setIsTopOfPage] = useState(true);
-  const isAboveMediumScreen = useMediaQuery('(min-width: 1060px)');
+  const isDesktop = useMediaQuery('(min-width: 1060px)');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,7 +35,7 @@ const Portfolio = () => {
         setSelectedPage={setSelectedPage}
       />
       <div className="w-5/6 mx-auto md:h-full">
-        {isAboveMediumScreen && (
+        {isDesktop && (
           <DotGroup
             selectedPage={selectedPage}
             setSelectedPage={setSelectedPage}
@@ -37,8 +43,33 @@ const Portfolio = () => {
         )}
         <Landing setSelectedPage={setSelectedPage} />
       </div>
+      <LineGradient />
+      <div className="w-5/6 mx-auto md:h-full ">
+        <Members setSelectedPage={setSelectedPage} />
+      </div>
+      <LineGradient />
+      <div className="w-5/6 mx-auto">
+        <motion.div
+          margin="0 0 -200px 0"
+          amount="all"
+          onViewportEnter={() => setSelectedPage('projects')}
+        >
+          <Projects />
+        </motion.div>
+      </div>
+      {/* <LineGradient />
+      <div className="w-5/6 mx-auto md:h-full">
+        <motion.div
+          margin="0 0 -200px 0"
+          amount="all"
+          onViewportEnter={() => setSelectedPage('contact')}
+        >
+          <Contact />
+        </motion.div>
+      </div>
+      <Footer /> */}
     </div>
   );
-};
+}
 
 export default Portfolio;
