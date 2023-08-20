@@ -3,7 +3,7 @@ import useMediaQuery from './hooks/useMediaQuery';
 import Navbar from './scenes/Navbar';
 import Members from './scenes/Members';
 import Projects from './scenes/Projects';
-// import Contact from './scenes/Contact';
+import Contact from './scenes/Contact';
 // import Footer from './scenes/Footer';
 import DotGroup from './scenes/DotGroup';
 import Landing from './scenes/Landing';
@@ -57,7 +57,7 @@ function Portfolio() {
           <Projects />
         </motion.div>
       </div>
-      {/* <LineGradient />
+      <LineGradient />
       <div className="w-5/6 mx-auto md:h-full">
         <motion.div
           margin="0 0 -200px 0"
@@ -67,7 +67,7 @@ function Portfolio() {
           <Contact />
         </motion.div>
       </div>
-      <Footer /> */}
+      {/* <Footer /> */}
     </div>
   );
 }

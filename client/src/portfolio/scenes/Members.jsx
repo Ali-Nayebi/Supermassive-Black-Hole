@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import LineGradient from '../components/LineGradient';
-import './members.css';
 
 const Members = ({ setSelectedPage }) => {
   const overlayStyles = `absolute opacity-0 hover:opacity-90 transition duration-500
