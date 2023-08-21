@@ -2,9 +2,11 @@ import SocialMediaIcons from '../components/SocialMediaIcons';
 import useMediaQuery from '../hooks/useMediaQuery';
 import { motion } from 'framer-motion';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
+import { getTranslate } from '../../localization';
 
 const Landing = ({ setSelectedPage }) => {
   const isAboveMediumScreen = useMediaQuery('(min-width: 1060px)');
+  const translate = getTranslate();
   return (
     <section
       id="home"
@@ -45,19 +47,18 @@ const Landing = ({ setSelectedPage }) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <p className="text-6xl font-playfair z-10 text-center md:text-start">
+          <p className="text-5xl z-10 text-center md:text-start">
             <span
               className="xs:relative md:text-deep-blue xs:font-semibold xs:before:content-brush
               before:absolute before:-left-[35px] before:-top-[73px] before:z-[-1]"
             >
-              Jinxed {''}
+              {translate.jinx}&nbsp;
             </span>
-            Squad
+            {translate.squad}
           </p>
 
           <p className="mt-10 mb-7 text-sm text-center md:text-start">
-            We're a group of professionals with diverse skills (such as coding,
-            UI/UX design, and SEO) who work together to develop websites.
+            {translate.squaddes}
           </p>
         </motion.div>
 
@@ -79,16 +80,7 @@ const Landing = ({ setSelectedPage }) => {
             onClick={() => setSelectedPage('contact')}
             href="#contact"
           >
-            Contact Us
-          </AnchorLink>
-          <AnchorLink
-            className="rounded-r-sm bg-gradient-rainblue py-0.5 pr-0.5"
-            onClick={() => setSelectedPage('contact')}
-            href="#contact"
-          >
-            <div className="bg-deep-blue hover:text-red transition duration-500 w-full h-full flex items-center justify-center px-10 font-playfair">
-              Let's talk.
-            </div>
+            {translate.contactus}
           </AnchorLink>
         </motion.div>
 

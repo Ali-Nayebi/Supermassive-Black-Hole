@@ -57,4 +57,9 @@ export default {
   billingInfo: 'Billing Information',
   sameForShip: 'Same for Shipping Address',
   shipAdd: 'Shipping Information',
+  jinx: 'Jinxed',
+  squad: 'Squad',
+  squaddes:
+    "We're a group of professionals with diverse skills (such as coding, UI/UX design, and SEO) who work together to develop websites.",
+  contactus: 'Contact Us',
 };
