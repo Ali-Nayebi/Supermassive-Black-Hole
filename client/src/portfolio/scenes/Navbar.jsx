@@ -3,8 +3,9 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 import useMediaQuery from '../hooks/useMediaQuery';
 import { Button, Typography } from '@mui/material';
 import { changeLanguage, lang } from '../../localization';
+import { getTranslate } from '../../localization';
 
-const Link = ({ page, selectedPage, setSelectedPage }) => {
+const Link = ({ page, selectedPage, setSelectedPage, name }) => {
   const lowerCasePage = page.toLowerCase();
   return (
     <AnchorLink
@@ -14,12 +15,13 @@ const Link = ({ page, selectedPage, setSelectedPage }) => {
       href={`#${lowerCasePage}`}
       onClick={() => setSelectedPage(lowerCasePage)}
     >
-      {page}
+      <Typography className="text-5xl">{name}</Typography>
     </AnchorLink>
   );
 };
 
 const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
+  const translate = getTranslate();
   const [isMenuToggled, setIsMenuToggled] = useState(false);
   const isAboveSmallScreen = useMediaQuery('(min-width: 800px)');
   const navbarBackground = isTopOfPage ? '' : 'bg-red';
@@ -62,21 +64,25 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
           <div className="flex justify-between gap-10 font-opensans text-sm font-semibold">
             <Link
               page="Home"
+              name={translate.home}
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
             <Link
               page="Members"
+              name={translate.members}
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
             <Link
               page="Projects"
+              name={translate.projects}
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
             <Link
               page="Contact"
+              name={translate.contactp}
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
@@ -92,7 +98,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
 
         {/* MOBILE MENU POPUP */}
         {!isAboveSmallScreen && isMenuToggled && (
-          <div className="fixed right-0 bottom-0 h-full bg-blue w-[300px]">
+          <div className="fixed right-0 bottom-0 h-full bg-blue w-[250px]">
             {/* CLOSE ICON */}
             <div className="flex justify-end p-12">
               <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
@@ -104,21 +110,25 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
             <div className="flex flex-col gap-10 ml-[33%] text-2xl text-deep-blue">
               <Link
                 page="Home"
+                name={translate.home}
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
               <Link
                 page="Members"
+                name={translate.members}
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
               <Link
                 page="Projects"
+                name={translate.projects}
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
               <Link
                 page="Contact"
+                name={translate.contactp}
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />

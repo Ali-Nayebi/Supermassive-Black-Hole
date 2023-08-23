@@ -62,4 +62,8 @@ export default {
   squaddes:
     "We're a group of professionals with diverse skills (such as coding, UI/UX design, and SEO) who work together to develop websites.",
   contactus: 'Contact Us',
+  home: 'Home',
+  members: 'Members',
+  projects: 'Projects',
+  contactp: 'Contact',
 };
