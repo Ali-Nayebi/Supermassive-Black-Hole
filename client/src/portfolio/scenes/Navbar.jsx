@@ -15,7 +15,7 @@ const Link = ({ page, selectedPage, setSelectedPage, name }) => {
       href={`#${lowerCasePage}`}
       onClick={() => setSelectedPage(lowerCasePage)}
     >
-      <Typography className="text-5xl">{name}</Typography>
+      {name}
     </AnchorLink>
   );
 };
@@ -61,7 +61,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
 
         {/* DESKTOP NAV */}
         {isAboveSmallScreen ? (
-          <div className="flex justify-between gap-10 font-opensans text-sm font-semibold">
+          <div className="flex justify-between gap-9  text-lg font-semibold">
             <Link
               page="Home"
               name={translate.home}
@@ -107,7 +107,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
             </div>
 
             {/* MENU ITEMS */}
-            <div className="flex flex-col gap-10 ml-[33%] text-2xl text-deep-blue">
+            <div className="flex flex-col gap-10 justify-center items-center text-2xl text-deep-blue">
               <Link
                 page="Home"
                 name={translate.home}
