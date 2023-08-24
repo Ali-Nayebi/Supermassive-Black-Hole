@@ -66,4 +66,10 @@ export default {
   members: 'Members',
   projects: 'Projects',
   contactp: 'Contact',
+  co: 'CONTACT US',
+  to: 'TO GET STARTED',
+  name: 'NAME',
+  em: 'EMAIL',
+  message: 'MESSAGE',
+  sendm: 'SEND US A MESSAGE',
 };

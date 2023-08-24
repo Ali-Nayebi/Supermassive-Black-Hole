@@ -66,4 +66,10 @@ export default {
   members: 'اعضا',
   projects: 'نمونه کار',
   contactp: 'تماس با ما',
+  co: 'برای شروع',
+  to: 'به ما پیام دهید',
+  name: 'نام',
+  em: 'ایمیل',
+  message: 'پیام',
+  sendm: 'ارسال پیام',
 };

@@ -1,8 +1,10 @@
 import LineGradient from '../components/LineGradient';
 import { useForm } from 'react-hook-form';
 import { motion } from 'framer-motion';
+import { getTranslate } from '../../localization';
 
 const Contact = () => {
+  const translate = getTranslate();
   const {
     register,
     trigger,
@@ -31,8 +33,8 @@ const Contact = () => {
         className="flex justify-end w-full"
       >
         <div>
-          <p className="font-playfair font-semibold text-4xl">
-            <span className="text-yellow">CONTACT US</span> TO GET STARTED
+          <p className="font-semibold text-4xl">
+            <span className="text-yellow">{translate.co}</span> {translate.to}
           </p>
           <div className="flex md:justify-end my-5">
             <LineGradient width="w-1/2" />
@@ -76,7 +78,7 @@ const Contact = () => {
             <input
               className="w-full bg-blue font-semibold placeholder-opaque-black p-3"
               type="text"
-              placeholder="NAME"
+              placeholder={translate.name}
               {...register('name', {
                 required: true,
                 maxLength: 100,
@@ -92,7 +94,7 @@ const Contact = () => {
             <input
               className="w-full bg-blue font-semibold placeholder-opaque-black p-3 mt-5"
               type="text"
-              placeholder="EMAIL"
+              placeholder={translate.em}
               {...register('email', {
                 required: true,
                 pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
@@ -108,7 +110,7 @@ const Contact = () => {
             <textarea
               className="w-full bg-blue font-semibold placeholder-opaque-black p-3 mt-5"
               name="message"
-              placeholder="MESSAGE"
+              placeholder={translate.message}
               rows="4"
               cols="50"
               {...register('message', {
@@ -129,7 +131,7 @@ const Contact = () => {
               className="p-5 bg-yellow font-semibold text-deep-blue mt-5 hover:bg-red hover:text-white transition duration-500"
               type="submit"
             >
-              SEND US A MESSAGE
+              {translate.sendm}
             </button>
           </form>
         </motion.div>
