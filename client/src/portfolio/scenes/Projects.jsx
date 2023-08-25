@@ -60,42 +60,59 @@ const Projects = () => {
 
       {/* PROJECTS */}
       <div className="flex justify-center">
-        <motion.div
-          className="sm:grid sm:grid-cols-3"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          variants={container}
-        >
-          {/* ROW 1 */}
-          <div
-            className="flex justify-center text-center items-center p-10 bg-red
-              max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"
+        <div className="sm:grid sm:grid-rows-3">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            className="sm:grid sm:grid-cols-3"
+            viewport={{ once: true, amount: 0.5 }}
+            variants={container}
           >
-            {translate.bs}
-          </div>
-          <Project
-            title="Project 1"
-            description="Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Nulla
+            {/* ROW 1 */}
+            <div
+              className="flex justify-center text-center items-center p-10 bg-red
+              max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"
+            >
+              {translate.bs}
+            </div>
+            <Project
+              title="Project 1"
+              description="Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Nulla
           porttitor accumsan tincidunt."
-          />
-          <Project title="Project 2" />
-
-          {/* ROW 2 */}
-          <Project title="Project 3" />
-          <Project title="Project 4" />
-          <Project title="Project 5" />
-
-          {/* ROW 3 */}
-          <Project title="Project 6" />
-          <Project title="Project 7" />
-          <div
-            className="flex justify-center text-center items-center p-10 bg-blue
-              max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"
+            />
+            <Project title="Project 2" />
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            className="sm:grid sm:grid-cols-3"
+            viewport={{ once: true, amount: 0.5 }}
+            variants={container}
           >
-            {translate.su}
-          </div>
-        </motion.div>
+            {/* ROW 2 */}
+            <Project title="Project 3" />
+            <Project title="Project 4" />
+            <Project title="Project 5" />
+          </motion.div>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            className="sm:grid sm:grid-cols-3"
+            viewport={{ once: true, amount: 0.5 }}
+            variants={container}
+          >
+            {/* ROW 3 */}
+            <Project title="Project 6" />
+            <Project title="Project 7" />
+            <div
+              className="flex justify-center text-center items-center p-10 bg-blue
+              max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"
+            >
+              {translate.su}
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
