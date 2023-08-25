@@ -5,7 +5,7 @@ const Members = ({ setSelectedPage }) => {
   const overlayStyles = `absolute opacity-0 hover:opacity-90 transition duration-500
     bg-grey z-30 flex flex-col justify-center items-center text-center text-deep-blue`;
   return (
-    <section id="members" className="pt-10 pb-24">
+    <section id="members" className="pt-40 pb-24">
       {/* header */}
       <motion.div
         className="md:w-2/4 mx-auto text-center"

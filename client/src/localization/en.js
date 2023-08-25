@@ -72,4 +72,10 @@ export default {
   em: 'EMAIL',
   message: 'MESSAGE',
   sendm: 'SEND US A MESSAGE',
+  p: 'PRO',
+  j: 'JECTS',
+  project:
+    'here you can see some of our projects, hover on each one to see which libraries and modules has been used to create them for example this portfolio has been created with react, tailwindcss, framer motion and react-hook-forms. you can also click on them to enter each project.',
+  bs: 'BEAUTIFUL USER INTERFACES',
+  su: 'SMOOTH USER EXPERIENCE',
 };
