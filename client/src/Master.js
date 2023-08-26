@@ -7,7 +7,7 @@ function Master() {
     <div>
       <Routes>
         <Route path="/" element={<Portfolio />} />
-        <Route path="/1" element={<ProOne />} />
+        <Route path="/1/*" element={<ProOne />} />
       </Routes>
     </div>
   );
