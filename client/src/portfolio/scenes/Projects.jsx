@@ -1,6 +1,7 @@
 import LineGradient from '../components/LineGradient';
 import { motion } from 'framer-motion';
 import { getTranslate } from '../../localization';
+import { useNavigate } from 'react-router-dom';
 
 const container = {
   hidden: {},
@@ -14,13 +15,18 @@ const projectVariant = {
   visible: { opacity: 1, scale: 1 },
 };
 
-const Project = ({ title, description }) => {
+const Project = ({ title, description, path }) => {
+  const navigate = useNavigate();
   const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500
     bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue`;
   const projectTitle = title.split(' ').join('-').toLowerCase();
 
   return (
-    <motion.div variants={projectVariant} className="relative">
+    <motion.div
+      onClick={() => navigate(path)}
+      variants={projectVariant}
+      className="relative cursor-pointer"
+    >
       <div className={overlayStyles}>
         <p className="text-2xl font-playfair">{title}</p>
         <p className="mt-7">{description}</p>
@@ -69,13 +75,15 @@ const Projects = () => {
             variants={container}
           >
             {/* ROW 1 */}
-            <div
+            <motion.div
+              variants={projectVariant}
               className="flex justify-center text-center items-center p-10 bg-red
               max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"
             >
               {translate.bs}
-            </div>
+            </motion.div>
             <Project
+              path="/1"
               title="Project 1"
               description="Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Nulla
           porttitor accumsan tincidunt."
@@ -105,12 +113,13 @@ const Projects = () => {
             {/* ROW 3 */}
             <Project title="Project 6" />
             <Project title="Project 7" />
-            <div
-              className="flex justify-center text-center items-center p-10 bg-blue
+            <motion.div
+              variants={projectVariant}
+              className="flex justify-center text-center items-center p-10 bg-red
               max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"
             >
               {translate.su}
-            </div>
+            </motion.div>
           </motion.div>
         </div>
       </div>

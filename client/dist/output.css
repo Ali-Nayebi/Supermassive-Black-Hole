@@ -819,6 +819,10 @@ video {
   flex-basis: 60%;
 }
 
+.cursor-pointer{
+  cursor: pointer;
+}
+
 .resize{
   resize: both;
 }
