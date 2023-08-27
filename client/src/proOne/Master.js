@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useLocation, Routes, Route } from 'react-router-dom';
 import Navbar from './scenes/global/Navbar';
 import CartMenu from './scenes/global/CartMenu';
+import Footer from './scenes/global/Footer';
 import './master.css';
 
 const ScrollToTop = () => {
@@ -20,6 +21,7 @@ function Master() {
       <Navbar />
       <ScrollToTop />
       <CartMenu />
+      <Footer />
     </div>
   );
 }
