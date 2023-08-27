@@ -747,6 +747,10 @@ video {
   margin-top: 1.75rem;
 }
 
+.block{
+  display: block;
+}
+
 .flex{
   display: flex;
 }
@@ -882,6 +886,10 @@ video {
 
 .rounded-sm{
   border-radius: 0.125rem;
+}
+
+.border{
+  border-width: 1px;
 }
 
 .bg-blue{

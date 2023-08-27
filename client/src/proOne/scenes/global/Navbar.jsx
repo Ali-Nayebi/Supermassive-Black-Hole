@@ -63,7 +63,7 @@ const Navbar = () => {
         </Box>
 
         <Box
-          onClick={() => navigate('/')}
+          onClick={() => navigate('/1')}
           sx={{ '&:hover': { cursor: 'pointer' }, marginRight: '-10px' }}
         >
           <img src={Logo} alt="logo" style={{ width: 150, height: 75 }} />
