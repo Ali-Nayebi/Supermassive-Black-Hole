@@ -24,7 +24,6 @@ function Master() {
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
-
       <CartMenu />
       <Footer />
     </div>
