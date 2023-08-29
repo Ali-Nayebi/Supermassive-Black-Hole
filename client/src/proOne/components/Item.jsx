@@ -32,6 +32,7 @@ const Item = ({ item, width }) => {
 
   return (
     <Box width={width}>
+      <Button onClick={() => navigate('baba')}>baba</Button>
       <Box
         position="relative"
         onMouseOver={() => setIsHovered(true)}
@@ -42,7 +43,7 @@ const Item = ({ item, width }) => {
           width="300px"
           height="400px"
           src={`http://localhost:1337${url}`}
-          onClick={() => navigate(`/item/${item.id}`)}
+          onClick={() => navigate(`item/${item.id}`)}
           style={{ cursor: 'pointer' }}
         />
         <Box
