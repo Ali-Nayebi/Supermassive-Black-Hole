@@ -7,7 +7,6 @@ import Chechout from './scenes/checkout/Checkout';
 import CartMenu from './scenes/global/CartMenu';
 import Footer from './scenes/global/Footer';
 import './master.css';
-import Baba from './scenes/itemDetails/Baba';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -26,7 +25,6 @@ function Master() {
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="baba" element={<Baba />} />
         <Route path="item/:itemId" element={<ItemDetails />} />
         <Route path="checkout" element={<Chechout />} />
       </Routes>
