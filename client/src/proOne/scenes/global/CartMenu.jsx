@@ -147,7 +147,7 @@ const CartMenu = () => {
                 m: '20px 0',
               }}
               onClick={() => {
-                navigate('/checkout');
+                navigate('checkout');
                 dispatch(setIsCartOpen({}));
               }}
             >
