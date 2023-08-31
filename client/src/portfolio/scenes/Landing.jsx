@@ -1,4 +1,4 @@
-import SocialMediaIcons from '../components/SocialMediaIcons';
+// import SocialMediaIcons from '../components/SocialMediaIcons';
 import useMediaQuery from '../hooks/useMediaQuery';
 import { motion } from 'framer-motion';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
@@ -84,7 +84,7 @@ const Landing = ({ setSelectedPage }) => {
           </AnchorLink>
         </motion.div>
 
-        <motion.div
+        {/* <motion.div
           className="flex mt-5 justify-center md:justify-start"
           initial="hidden"
           whileInView="visible"
@@ -96,7 +96,7 @@ const Landing = ({ setSelectedPage }) => {
           }}
         >
           <SocialMediaIcons />
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

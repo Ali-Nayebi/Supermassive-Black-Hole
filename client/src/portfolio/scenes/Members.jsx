@@ -1,14 +1,17 @@
 import { motion } from 'framer-motion';
 import LineGradient from '../components/LineGradient';
+import SocialMediaIcons from '../components/SocialMediaIcons';
+import { getTranslate } from '../../localization';
 
 const Members = ({ setSelectedPage }) => {
+  const translate = getTranslate();
   const overlayStyles = `absolute opacity-0 hover:opacity-90 transition duration-500
     bg-grey z-30 flex flex-col justify-center items-center text-center text-deep-blue`;
   return (
     <section id="members" className="pt-40 pb-24">
       {/* header */}
       <motion.div
-        className="md:w-2/4 mx-auto text-center"
+        className="md:w-2/4 mx-auto text-center pb-12"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
@@ -19,8 +22,8 @@ const Members = ({ setSelectedPage }) => {
         }}
       >
         <div>
-          <p className="font-playfair font-semibold text-5xl">
-            <span className="text-red">MEMBERS</span>
+          <p className="font-semibold text-5xl">
+            <span className="text-red">{translate.mem}</span>
           </p>
           <div className="flex justify-center mt-2">
             <LineGradient width="w-2/3" />
@@ -42,9 +45,9 @@ const Members = ({ setSelectedPage }) => {
             visible: { opacity: 1, y: 0 },
           }}
         >
-          <div className="text-center z-10 ">
+          <div className="text-center z-10 bg-greb rounded-xl">
             <p className="font-playfair pt-1 px-5 font-semibold text-4xl">
-              Ali Nayebi
+              {translate.ali}
             </p>
             <p className="font-playfair p-1 font-semibold text-xl">
               Front-End Developer
@@ -64,9 +67,12 @@ const Members = ({ setSelectedPage }) => {
               />
             </div>
 
-            <p className="font-playfair font-semibold text-3xl mt-3">
-              Experience
+            <p className="font-playfair font-semibold text-xl mt-6 text-red">
+              elderekko@gmail.com
             </p>
+            <div className="flex justify-center">
+              <SocialMediaIcons />
+            </div>
           </div>
         </motion.div>
         <motion.div

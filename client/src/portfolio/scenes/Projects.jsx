@@ -15,7 +15,7 @@ const projectVariant = {
   visible: { opacity: 1, scale: 1 },
 };
 
-const Project = ({ title, description, path }) => {
+const Project = ({ title, description, path, image }) => {
   const navigate = useNavigate();
   const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500
     bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue`;
@@ -28,7 +28,7 @@ const Project = ({ title, description, path }) => {
       className="relative cursor-pointer"
     >
       <div className={overlayStyles}>
-        <p className="text-2xl font-playfair">{title}</p>
+        <p className="text-2xl font-playfair">{image}</p>
         <p className="mt-7">{description}</p>
       </div>
       <img src={`../assets/${projectTitle}.jpeg`} alt={projectTitle} />
@@ -61,7 +61,7 @@ const Projects = () => {
             <LineGradient width="w-1/3" />
           </div>
         </div>
-        <p className="mt-10 mb-10">{translate.project}</p>
+        <p className="mt-10 mb-10 text-lg">{translate.project}</p>
       </motion.div>
 
       {/* PROJECTS */}
@@ -84,9 +84,9 @@ const Projects = () => {
             </motion.div>
             <Project
               path="/1"
+              image={translate.project1}
               title="Project 1"
-              description="Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Nulla
-          porttitor accumsan tincidunt."
+              description="React, Strapi, MUI, Redux Toolkit, react-router-dom, formik, yup"
             />
             <Project title="Project 2" />
           </motion.div>
